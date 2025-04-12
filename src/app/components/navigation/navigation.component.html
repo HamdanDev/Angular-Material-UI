@@ -1,0 +1,78 @@
+<div class="nav-container">
+    <h1>Navigation Components</h1>
+  
+    <!-- Navigation Links -->
+    <section class="nav-section">
+      <h2>Page Navigation</h2>
+      <div class="nav-links">
+        <button mat-button routerLink="/form-controls">Form Controls</button>
+        <button mat-button routerLink="/navigation">Navigation</button>
+      </div>
+    </section>
+  
+    <!-- Tabs Section -->
+    <section class="nav-section">
+      <h2>Tabs Navigation</h2>
+      <!-- Tabs provide easy content switching -->
+      <mat-tab-group [(selectedIndex)]="selectedTab">
+        <mat-tab label="Profile">
+          <div class="tab-content">
+            <h3>Profile Content</h3>
+            <p>This is your profile information.</p>
+          </div>
+        </mat-tab>
+        <mat-tab label="Settings">
+          <div class="tab-content">
+            <h3>Settings Content</h3>
+            <p>Manage your application settings here.</p>
+          </div>
+        </mat-tab>
+        <mat-tab label="Help">
+          <div class="tab-content">
+            <h3>Help Content</h3>
+            <p>Need assistance? Find help here.</p>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </section>
+  
+    <!-- Dropdown Menu Section -->
+    <section class="nav-section">
+      <h2>Dropdown Menu</h2>
+      <!-- Menu trigger button -->
+      <button mat-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+        Open Menu
+      </button>
+      <!-- Dropdown menu content -->
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/form-controls">
+          <mat-icon>person</mat-icon>
+          <span>Form Controls</span>
+        </button>
+        <button mat-menu-item routerLink="/navigation">
+          <mat-icon>settings</mat-icon>
+          <span>Navigation</span>
+        </button>
+      </mat-menu>
+    </section>
+  
+    <!-- Stepper Section -->
+    <section class="nav-section">
+      <h2>Stepper Navigation</h2>
+      <!-- Horizontal stepper for step-by-step navigation -->
+      <mat-horizontal-stepper>
+        <mat-step *ngFor="let step of steps; let i = index">
+          <ng-template matStepLabel>{{step}}</ng-template>
+          <div class="step-content">
+            <h3>Step {{i + 1}}: {{step}}</h3>
+            <p>This is the content for {{step}}.</p>
+            <div class="step-actions">
+              <button mat-button matStepperPrevious *ngIf="i > 0">Back</button>
+              <button mat-button matStepperNext *ngIf="i < steps.length - 1">Next</button>
+            </div>
+          </div>
+        </mat-step>
+      </mat-horizontal-stepper>
+    </section>
+  </div>

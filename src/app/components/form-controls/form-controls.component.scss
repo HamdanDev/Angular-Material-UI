@@ -1,0 +1,39 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+
+
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+
+  h1 {
+    margin-bottom: 30px;
+  }
+}
+
+.form-section {
+  margin-bottom: 30px;
+  h2 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+  }
+}
+
+.full-width {
+  width: 100%;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+mat-checkbox {
+  margin-bottom: 15px;
+}

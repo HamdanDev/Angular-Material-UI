@@ -1,0 +1,40 @@
+<div class="form-container">
+    <h1>Material UI Form Controls</h1>
+    
+    <div class="form-section">
+      <h2>Text Input</h2>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Enter your name</mat-label>
+        <input matInput placeholder="John Doe">
+        <mat-hint>Enter your full name</mat-hint>
+      </mat-form-field>
+    </div>
+  
+    <div class="form-section">
+      <h2>Dropdown</h2>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Favorite Food</mat-label>
+        <mat-select [(ngModel)]="selectedFood">
+          <mat-option *ngFor="let food of foods" [value]="food">
+            {{food}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  
+    <div class="form-section">
+      <h2>Checkbox</h2>
+      <mat-checkbox [(ngModel)]="notifications" >
+        Receive notifications
+      </mat-checkbox>
+    </div>
+  
+    <div class="form-section">
+      <h2>Radio Buttons</h2>
+      <mat-radio-group [(ngModel)]="selectedContact" class="radio-group">
+        <mat-radio-button value="email">Email</mat-radio-button>
+        <mat-radio-button value="phone">Phone</mat-radio-button>
+        <mat-radio-button value="mail">Mail</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>

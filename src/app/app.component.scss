@@ -1,0 +1,72 @@
+.app-container {
+  height: 100vh;
+  display: flex;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+
+
+.app-toolbar,
+mat-toolbar {
+  background: var(--mat-sys-primary-container);
+  color: var(--mat-sys-primary);                
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+  border-bottom: 1px solid var(--custom-border-color);
+  transition: border-color 0.3s ease;
+}
+
+.app-sidenav {
+  width: 250px;
+  padding-top: 64px;
+  border-right: 1px solid var(--custom-border-color);
+  transition: border-color 0.3s ease;
+
+  .mat-icon {
+    margin-right: 12px;
+  }
+
+  .mat-list-item {
+    margin: 4px 8px;
+    width: auto;
+  }
+}
+
+.app-content {
+  padding: 84px 20px 20px;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  border: 1px solid var(--custom-border-color);
+  border-radius: 8px;
+}
+
+.active {
+  background: rgba(0, 0, 0, 0.1);
+
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+router-outlet {
+  margin-top: 64px; // This matches the toolbar height
+  padding: 20px;
+}
