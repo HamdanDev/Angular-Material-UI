@@ -8,7 +8,6 @@
 }
 
 
-
 .app-toolbar,
 mat-toolbar {
   background: var(--mat-sys-primary-container);
@@ -19,7 +18,7 @@ mat-toolbar {
   right: 0;
   z-index: 2;
 
-  border-bottom: 1px solid var(--custom-border-color);
+  //border-bottom: 1px solid var(--custom-border-color);
   transition: border-color 0.3s ease;
 }
 
@@ -28,6 +27,10 @@ mat-toolbar {
   padding-top: 64px;
   border-right: 1px solid var(--custom-border-color);
   transition: border-color 0.3s ease;
+
+  // 🎨 Gradient from primary to tertiary
+  background-color: transparent; // Let the gradient layer shine
+  color: var(--mat-sys-primary); // Ensure readable text
 
   .mat-icon {
     margin-right: 12px;
@@ -50,8 +53,28 @@ mat-toolbar {
 }
 
 .active {
-  background: rgba(0, 0, 0, 0.1);
+  border-radius: 0; // reset default radius
 
+  &.active {
+    background-color: var(--mat-sys-primary-container);
+    color: var(--mat-sys-on-primary-container);
+
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    margin-left: 0;
+    padding-left: 20px;
+
+    // Optional: left accent bar
+    border-left: 4px solid var(--mat-sys-primary);
+  }
+
+  // 🧽 Remove ripple overflow artifacts if needed
+  .mat-list-item-content {
+    overflow: hidden;
+  }
 }
 
 .spacer {
@@ -70,3 +93,10 @@ router-outlet {
   margin-top: 64px; // This matches the toolbar height
   padding: 20px;
 }
+
+.dark-mode-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+}
+

@@ -1,0 +1,36 @@
+.table-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+  
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+  }
+  
+  .filter-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .mat-elevation-z8 {
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  th.mat-sort-header-sorted {
+    color: black;
+  }
+  
+  .mat-mdc-row:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+  
+  .mat-mdc-cell {
+    padding: 8px 16px;
+  }

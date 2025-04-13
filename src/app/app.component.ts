@@ -6,6 +6,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatTableModule } from '@angular/material/table';
 import { NgFor } from '@angular/common';
 
 
@@ -27,7 +28,8 @@ interface MenuItem {
     MatIconModule,
     MatButtonModule,
     NgFor,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatTableModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -46,8 +48,9 @@ export class AppComponent {
   }
 
   menuItems: MenuItem[] = [
-    { path: '/form-controls', icon: 'description', label: 'Form Controls' },
-    { path: '/navigation', icon: 'menu', label: 'Navigation' },
-    { path: '/layout', icon: 'grid_view', label: 'Layout' }
+    { path: '/form-controls', icon: 'insert_drive_file', label: 'Form Controls' },
+    { path: '/navigation', icon: 'navigation', label: 'Navigation' },
+    { path: '/layout', icon: 'insert_photo', label: 'Layout' },
+    { path: '/data-table', icon: 'table_chart', label: 'Data Table' }
   ];
 }
