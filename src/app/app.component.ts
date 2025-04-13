@@ -51,6 +51,7 @@ export class AppComponent {
     { path: '/form-controls', icon: 'insert_drive_file', label: 'Form Controls' },
     { path: '/navigation', icon: 'navigation', label: 'Navigation' },
     { path: '/layout', icon: 'insert_photo', label: 'Layout' },
-    { path: '/data-table', icon: 'table_chart', label: 'Data Table' }
+    { path: '/data-table', icon: 'table_chart', label: 'Data Table' },
+    { path: '/dialogs', icon: 'chat', label: 'Dialogs' }
   ];
 }

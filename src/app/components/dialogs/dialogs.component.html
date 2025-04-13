@@ -1,1 +1,29 @@
-<p>dialogs works!</p>
+<div class="dialogs-container">
+    <h1>Dialogs & Notifications</h1>
+  
+    <div class="demo-section">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Dialog Examples</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Click the button below to open a confirmation dialog:</p>
+          <button mat-raised-button color="primary" (click)="openConfirmDialog()">
+            Open Dialog
+          </button>
+        </mat-card-content>
+      </mat-card>
+  
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Snackbar Examples</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Click to show a simple notification:</p>
+          <button mat-raised-button color="accent" (click)="showSimpleSnackBar()">
+            Show Snackbar
+          </button>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>

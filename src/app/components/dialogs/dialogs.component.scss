@@ -1,0 +1,34 @@
+.dialogs-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+  
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+  }
+  
+  .demo-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  
+    mat-card {
+      height: 100%;
+      
+      mat-card-content {
+        padding: 16px;
+        
+        button {
+          margin-top: 16px;
+        }
+        
+        p {
+          margin-bottom: 16px;
+          color: #666;
+        }
+      }
+    }
+  }
